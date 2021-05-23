@@ -1,10 +1,15 @@
 from simpleimage import SimpleImage
 
-DANCER = 'dancer.jpg'
-BACK_IMAGE = 'Tie-dye.png'
+DANCER = "dancer.jpg"
+BACK_IMAGE = "Tie-dye.png"
 INTENSITY_THRESHOLD = 1.8
 
+
 def main():
+    """
+    This program is a takes an image of a dancer and
+    applies a background image around the dancer.
+    """
     dancer = SimpleImage(DANCER)
     back = SimpleImage(BACK_IMAGE)
     # back.show()
@@ -39,5 +44,6 @@ def trim_crop_image(original_img, trim_width, trim_height):
             new_img.set_pixel(x, y, orig_pixel)
     return new_img
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
