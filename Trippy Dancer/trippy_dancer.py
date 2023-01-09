@@ -37,7 +37,6 @@ def main():
         else:
             if option != 1 or option != 2:
                 option = int(input("Write 1 for foreground & 2 for background: "))
-    # trippy_dancer = dancer_color.save("trippy_dancer.png")
     dancer_color.save(f"trippy_dancer_{option}.png","PNG")
     dancer_color.show()
 
