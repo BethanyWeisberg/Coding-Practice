@@ -7,9 +7,9 @@ INTENSITY_THRESHOLD = 2.5
 
 def main():
     """
-    This program is takes an image of a dancer and either
-    drops a psychedelic image behind the dancer or replaces any red pixels
-    with the pixels of the psychedelic image.
+    This program takes an image of a dancer and either
+    drops a psychedelic image behind the dancer or replaces any
+    sufficiently red pixels with the pixels of the psychedelic image.
     """
     dancer = Image.open(DANCER)
     back = Image.open(BACK_IMAGE)
@@ -32,7 +32,7 @@ def main():
                 dancer_color = image_screening(dancer_trimmed, back_trimmed, pixel)
         # Option 2 will change the white-ish pixels to the other image pixels
         elif option == 2:
-            if pixel[2] >= 200 and pixel[3] >= 200 and pixel[4] >= 200:
+            if red >= 200 and green >= 200 and blue >= 200:
                 dancer_color = image_screening(dancer_trimmed, back_trimmed, pixel)
         else:
             if option != 1 or option != 2:
