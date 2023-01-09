@@ -5,14 +5,9 @@ Hello, welcome to my **Coding Practice** repository! Here I store programs and s
 
 ## Trippy Dancer
 
-In *Trippy Dancer*, I have written a program that replaces the either the red or the white pixels in one image (i.e. a picture of a dancer with a red dress and white backdroo) with the pixels of a second image (i.e. a tie-dye image), giving it a trippy look (**Images 1 and 2**).
-
-**Image 1**
-
-![trippy_dancer_1](https://user-images.githubusercontent.com/95442334/211238159-8bd4a57f-559c-452b-b58a-1cdab728725e.png)
-
-**Image 2**
-
-![trippy_dancer_2](https://user-images.githubusercontent.com/95442334/211238162-af4aa635-f31d-4047-a29e-128227612697.png)
+In *Trippy Dancer*, I have written a program that replaces the either the red or the white pixels in one image (**Image 1**) with the pixels of a second image (**Image 2**), giving it a trippy look (**Images 3 and 4**).
+| **Image 1**. Dancer | **Image 2**. Tie-dye | **Image 3**. Red pixels replaced | **Image 4**. White pixels replaced |
+| -----------| ----------- | ----------- | ----------- |
+| ![thumbnail_dancer](https://user-images.githubusercontent.com/95442334/211240523-cec05ae6-9c64-48fa-b30c-e1480c428fa4.jpg)  | ![thumbnail_Tie-dye](https://user-images.githubusercontent.com/95442334/211240535-339f83b8-c3c3-4cd6-8b80-3952c77fd356.png) | ![thumbnail_trippy_dancer_1](https://user-images.githubusercontent.com/95442334/211240546-66f9f0f5-1dec-4387-b8e4-b9f6f542b054.png) | ![thumbnail_trippy_dancer_2](https://user-images.githubusercontent.com/95442334/211240551-d8e14c9d-3d37-4a63-b22a-5e57baa1290d.png) |
 
 ***
