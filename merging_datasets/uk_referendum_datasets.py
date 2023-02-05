@@ -1,6 +1,8 @@
 import requests
-import json
+import csv
+import itertools
 
+# reading data into python
 uk_demo_src = r"https://raw.githubusercontent.com/viveknest/statascratch-solutions/main/UK%20Referendum%20Data/uk_demo.json"
 f = requests.get(uk_demo_src)
 uk_demo = f.json()
@@ -31,8 +33,16 @@ uk_rejected_dict = dict_convert(uk_rejected)
 
 # merge the dictionaries using the key
 merged_dict = {}
-
 for key in uk_demo_dict.keys():
     merged_dict.update({
         key: {**uk_demo_dict[key], **uk_results_dict[key], **uk_rejected_dict[key]}
     })
+local_filename = "uk_referendum_merged.csv"
+
+# Write nested dictionary values to csv file
+with open(local_filename, 'w', newline='') as fp:
+    csv_w = csv.DictWriter(fp,fieldnames=list(merged_dict[keys[0]].keys()))
+    csv_w.writeheader()
+    for i in merged_dict.values():
+        csv_w.writerow(i)
+fp.close()
