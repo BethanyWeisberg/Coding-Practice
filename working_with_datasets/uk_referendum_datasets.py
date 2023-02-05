@@ -102,3 +102,30 @@ with open(filename, 'w', newline='') as fp:
     for v in variable_list:
         csv_w.writerow(summ_stats(merged_dict,v))
 fp.close()
+
+"""
+Find the Area with the highest and
+lowest electorates using object properties
+for sorting
+"""
+# Unnest the merged dictionary:
+merged_list = [v for k,v in merged_dict.items()]
+
+# Use a lamda function to sort dictionary based on Electorate values
+# and return the
+lowest_electorate_area = sorted(merged_list, key = lambda x: x['Electorate'])[0]['Area']
+highest_electorate_area = sorted(merged_list, key = lambda x: x['Electorate'],reverse=True)[0]['Area']
+print(f'The area with the lowest electorates is {lowest_electorate_area}.\nThe area with the lowest electorates is {highest_electorate_area}.')
+
+"""
+Aggregation
+Find the electorate totals for each region 
+"""
+# Get all the regions by using a Python set
+regions = set([area['Region'] for area in merged_list])
+
+# add electorate sum total for each region
+region_dict = {}
+for region in regions:
+    region_sum = sum([area['Electorate'] for area in merged_list if area['Region'] ==  region])
+    region_dict.update({region: region_sum})
