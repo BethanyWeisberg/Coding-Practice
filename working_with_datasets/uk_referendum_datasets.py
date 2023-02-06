@@ -119,13 +119,43 @@ print(f'The area with the lowest electorates is {lowest_electorate_area}.\nThe a
 
 """
 Aggregation
-Find the electorate totals for each region 
+Find the electorate totals for each region
+and the % of electorates in each
 """
+
 # Get all the regions by using a Python set
 regions = set([area['Region'] for area in merged_list])
 
 # add electorate sum total for each region
 region_dict = {}
+
+total_region_sum = 0
 for region in regions:
     region_sum = sum([area['Electorate'] for area in merged_list if area['Region'] ==  region])
-    region_dict.update({region: region_sum})
+    total_region_sum += region_sum
+    region_dict[region] = {
+        "region_sum": region_sum,
+    }
+
+for region in regions:
+    region_dict[region]["percentage_of_total"] = "{:.2%}".format((region_dict[region]["region_sum"]/total_region_sum))
+
+filename = 'uk_referendum_aggregations.csv'
+fields = ['region','electorate_sum','electorate_percentage']
+with open(filename, 'w', newline='') as fp:
+    csv_w = csv.DictWriter(fp,fieldnames=fields)
+    csv_w.writeheader()
+        # csv_w.writerow({field: region_dict[region].get(field) or region for field in region_dict})
+    for region, info in region_dict.items():
+        # for key, value in info.items():
+        csv_w.writerow(dict(zip(fields, (region,list(info.values())))))
+fp.close()
+    # csv_columns = ['Question', 'UserID', 'Answer']
+    # filename = "output.csv"
+    # with open(filename, "w") as fl:
+    #     w = csv.DictWriter(fl, fieldnames=csv_columns, lineterminator='\n')
+    #     w.writeheader()
+    #     for question, data in finalDict.items()
+    #         for item in data:
+    #             for key, value in item.items():
+    #                 w.writerow(dict(zip(csv_columns, (question, user, answer))))
