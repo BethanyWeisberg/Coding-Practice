@@ -14,11 +14,11 @@ In [**Trippy Dancer**](https://github.com/BethanyWeisberg/Coding-Practice/tree/m
 
 ## Working With Datasets
 
-In [**working-with-datasets**](https://github.com/BethanyWeisberg/Coding-Practice/tree/main/working_with_datasets), I have [modified a Python program](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_datasets.py) (**Sankaran 2023**) that joins different datasets for a referendum in the UK, merges the datasets into a single dictionary, and then [writes the values to a CSV file](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_merged.csv) (**Image 5**). The program calculates summary statistics of the merged datasets, including [finding the min/max, median, 25th percentile, and 75th percentile values](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_merged.csv) for different variables that is then written to another CSV file (**Image 6**).
+In [**working-with-datasets**](https://github.com/BethanyWeisberg/Coding-Practice/tree/main/working_with_datasets), I have [modified a Python program](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_datasets.py) (**Sankaran 2023**) that joins different datasets for a referendum in the UK, merges the datasets into a single dictionary, and then [writes the values to a CSV file](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_merged.csv) (**Image 5**). The program calculates summary statistics of the merged datasets, including [finding the min/max, median, 25th percentile, and 75th percentile values](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_merged.csv) and [aggregates](https://github.com/BethanyWeisberg/Coding-Practice/blob/main/working_with_datasets/uk_referendum_aggregations.csv) that are then written to CSV files (**Images 6 and 7**).
 
-| **Image 5**. Merged Dictionary | **Image 6**. Summary Statistics |
-| -----------| ----------- |
-|<img width="1102" alt="image" src="https://user-images.githubusercontent.com/95442334/216851800-afaa6269-0b31-4098-b7d2-c4703afbe77c.png">|<img width="1102" alt="image" src="https://user-images.githubusercontent.com/95442334/216851831-5f002056-aa76-4fbd-9a4b-23de4c676992.png">|
+| **Image 5**. Merged Dictionary | **Image 6**. Summary Statistics | **Image 7**. Dataset Aggregates |
+| -----------| ----------- | ----------- |
+|<img width="1102" alt="image" src="https://user-images.githubusercontent.com/95442334/216851800-afaa6269-0b31-4098-b7d2-c4703afbe77c.png">|<img width="1102" alt="image" src="https://user-images.githubusercontent.com/95442334/216851831-5f002056-aa76-4fbd-9a4b-23de4c676992.png">|<img width="1164" alt="image" src="https://user-images.githubusercontent.com/95442334/217169030-23c7bf00-c30e-4f82-836e-1ef1c04bc1bf.png">|
 
 -----------
 ## Reference
