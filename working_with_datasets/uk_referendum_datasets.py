@@ -140,6 +140,8 @@ for region in regions:
     }
     region_aggregations.append(region_dict)
 
+region_aggregations.sort(key = lambda x: x['electorate_sum'], reverse=True)
+
 filename = 'uk_referendum_aggregations.csv'
 fields = ['region','electorate_sum','electorate_percentage']
 with open(filename, 'w', newline='') as fp:
