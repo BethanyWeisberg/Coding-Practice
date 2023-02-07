@@ -139,7 +139,6 @@ for region in regions:
         "electorate_percentage": "{:.2%}".format(region_sum/total_region_sum)
     }
     region_aggregations.append(region_dict)
-print(region_aggregations)
 
 filename = 'uk_referendum_aggregations.csv'
 fields = ['region','electorate_sum','electorate_percentage']
