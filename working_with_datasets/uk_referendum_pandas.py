@@ -13,7 +13,7 @@ merged_df.to_csv(filename,sep=',',index=False)
 # Summary Statistics
 stats = merged_df.describe().loc[['max','min','50%','25%','75%']][['Electorate','Votes_Cast','Valid_Votes','Remain','Leave','Rejected_Ballots']]
 filename = 'uk_ref_stats_pandas.csv'
-stats.to_csv(filename,sep=',',index=False)
+stats.to_csv(filename,sep=',')
 
 """
 Find Area with highest and lowest electorates
